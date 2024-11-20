@@ -10,12 +10,19 @@ public class Game {
             if (choice == 2) {
                 break;
             }
-            System.out.println("1. Beginner");
-            System.out.println("2. Medium");
-            System.out.println("2. Intermediate");
-            System.out.println("2. Hard");
+            System.out.println("I.Beginner");
+
+            System.out.println("II.Medium");
+
+            System.out.println("III.Intermediate");
+
+            System.out.println("IV.Hard");
+
+
             int level = new Scanner(System.in).nextInt();
             File inputFile = new File("Input.txt");
+
+
             File outputFile = new File("Output.txt");
             try {
                 BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile, true));
@@ -56,6 +63,10 @@ public class Game {
                     int user_result = new Scanner(System.in).nextInt();
                     if (result == user_result) score++;
                 }
+
+
+
+
                 if (score == lvl_max) System.out.println("Congratulation!!!");
                 try {
                     BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile, true));
